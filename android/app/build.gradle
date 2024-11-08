@@ -6,6 +6,10 @@ plugins {
 }
 
 android {
+    aaptOptions {
+        noCompress 'tflite'
+        noCompress 'lite'
+    }
     namespace = "com.example.speeddetection"
     compileSdk = 34
     ndkVersion = flutter.ndkVersion

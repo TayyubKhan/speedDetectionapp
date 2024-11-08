@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:gap/gap.dart';
-import 'package:speeddetection/Views/HomeScreen.dart';
+import 'HomeScreen.dart';
 
 class SplashScreen extends StatefulWidget {
   final String route = 'Splash';
@@ -19,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // TODO: implement initState
     super.initState();
     Timer((const Duration(seconds: 4)), () {
-      Navigator.push(
+      Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => HomeScreen()));
     });
   }
@@ -39,6 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 fontWeight: FontWeight.w600,
                 fontSize: 45,
               ),
+              textAlign:TextAlign.center,
             ),
             const Gap(20),
             Lottie.asset('assets/car.json', repeat: false)
